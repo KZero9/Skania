@@ -1,0 +1,74 @@
+html {
+    position: relative;
+    min-width: 100%;
+	min-height: 100%;
+	line-height: 160%;
+}
+#ct{
+	text-align:center;
+	font-family:함초롬바탕;
+}
+#bold{
+	font-weight: bold;
+	font-size: 15pt
+}
+#tbold{
+	font-weight: bold;
+}
+#tt{
+	font-size: 20pt;
+	font-weight: bold;
+}
+#w{ color:white;}
+#sidebar {
+    width: 320px;
+    font-size: .85em;
+    margin-top: 0;
+    position:fixed;
+    float: left;
+    top:0;
+    right:0;
+    bottom:0;
+    padding:0;
+    height: 100%;
+    cursor:default;
+    overflow-y:auto;
+    z-index: 100;
+}
+#search { position:absolute; left:10%;}
+a:link {text-decoration: none; color: white;}
+a:visited {text-decoration: none; color: white;}
+a:active {text-decoration: none; color: yellow;}
+a:hover {text-decoration: underline; color: yellow;}
+.back{
+				background-image:url('../img/bg1.jpg');
+				background-color: LightSKYBLUE;
+				}
+.front{
+				background-image:url('../img/bg0.jpg');
+				background-color: LightSKYBLUE;
+				background-size: cover;
+				}
+iframe {background:WHITE;}
+table {background:WHITE; color:black; width:90%;}
+aside{float:right;}
+#images{
+    margin:50px auto;
+}
+#images figure{
+    margin:0px 20px 20px;
+    display:inline-block;
+    text-decoration:none;
+}
+
+.huge{ font-size: 50pt;}
+.big{ font-size: 20pt;}
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: right;
+  padding: 10pt;
+  color:white;
+}

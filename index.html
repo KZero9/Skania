@@ -2,112 +2,24 @@
 <html>
 
 <head>
-    <title>눈이 내려요!</title>
-    <meta charset="utf-8" />
-    <audio src="http://dl.bgms.kr/download/esXiB/mp3/Marry%20Christmas%20Mr.Lawrence-%EB%A9%94%EB%A6%AC%20%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4%20%EB%AF%B8%EC%8A%A4%ED%84%B0%20%EB%A1%9C%EB%A0%8C%EC%8A%A4%28%EC%98%A4%EB%A5%B4%EA%B3%A8%EB%B2%84%EC%A0%84%29"
-        autoplay=true loop=true></audio>
-    <style>
-        .main {
-            background-image: url('http://cfile6.uf.tistory.com/image/26721344547B182038A03D');
-            background-color: LightSKYBLUE;
-            background-size: cover;
-        }
-        div {
-            color:white;
-            position: absolute;
-            font-size: 30pt;
-        }
-    </style>
-    <script>
-        var h = window.innerHeight;
-        var w = window.innerWidth;
-        var step = 1;
-        var stepw = 1;
-        var p= 10;
-        var pw= 100;
-        var position = new Array();
-        for(var i=0; i<30; i++){
-            position[i]=new Array();
-        }
-        function start() {
-            set();
-            down();
-            move();
-        }
-        function det(i){
-            var star = document.getElementById(i);
-            star.style.top = position[i-1][0] + 'px';
-            star.style.left = position[i-1][1] + 'px';
-        }
-        function set() {
-            for (var i = 1; i < 31; i++) {
-                var star = document.getElementById(i);
-                position[i-1][0]=Math.floor(Math.random() * h);
-                position[i-1][1]=Math.floor(Math.random() * w);
-                det(i);
-            }
-        }
-        function down() {
-            for (var i = 1; i < 31; i++) {
-                var star = document.getElementById(i);
-                position[i-1][0] += step;
-                if (position[i-1][0]+100>=h){
-                    position[i-1][0]=Math.floor(Math.random() * h*0.2);
-                    position[i-1][1]=Math.floor(Math.random() * w);
-                }
-                det(i);
-            }
-            setTimeout(down, p);
-        }
-        function move() {
-            for (var i = 1; i < 31; i++) {
-                var star = document.getElementById(i);
-                position[i-1][1] += Math.pow(-1, Math.floor(Math.random()*2)+1)*stepw;
-                if(position[i-1][1]>=w){
-                    position[i-1][1]=0;
-                }
-                else if(position[i-1][1]<=0){
-                    position[i-1][1]=w-10;
-                }
-                det(i);
-            }
-            setTimeout(move, pw);
-        }
-    </script>
+	<title>일본의 자동판매기</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="sc/mf.css">
+	<embed src="bgm/wave.mp3" autoplay=true loop=true hidden=true>
 </head>
 
-<body class=main>
-    <div id=1>*</div>
-    <div id=2>*</div>
-    <div id=3>*</div>
-    <div id=4>*</div>
-    <div id=5>*</div>
-    <div id=6>*</div>
-    <div id=7>*</div>
-    <div id=8>*</div>
-    <div id=9>*</div>
-    <div id=10>*</div>
-    <div id=11>*</div>
-    <div id=12>*</div>
-    <div id=13>*</div>
-    <div id=14>*</div>
-    <div id=15>*</div>
-    <div id=16>*</div>
-    <div id=17>*</div>
-    <div id=18>*</div>
-    <div id=19>*</div>
-    <div id=20>*</div>
-    <div id=21>*</div>
-    <div id=22>*</div>
-    <div id=23>*</div>
-    <div id=24>*</div>
-    <div id=25>*</div>
-    <div id=26>*</div>
-    <div id=27>*</div>
-    <div id=28>*</div>
-    <div id=29>*</div>
-    <div id=30>*</div>
-    <script>start();</script>
+<body id=w class=front>
+	<div id=ct>
+		<br>
+		<h1 class=huge>일본의 자동판매기</h1>
+		<h2>
+			<a href="dc.html" title="일본의 자동판매기" class=big>본문으로 이동</a>
+		</h2>
+	</div>
+
 </body>
+<footer class=footer>
+	3503 김성현
+</footer>
 
 </html>

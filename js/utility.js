@@ -25,6 +25,7 @@ function act(){
 function ct(){
     if(et<=document.getElementById("v").currentTime){
         document.getElementById("v").pause();
+        alert("문제 발생");
         show();
         document.getElementById("b1").onclick = function () { ans=1; choice(); hide(); document.getElementById("v").play(); this.onclick = null; };
 	    document.getElementById("b2").onclick = function () { ans=2; choice(); hide(); document.getElementById("v").play(); this.onclick = null; };

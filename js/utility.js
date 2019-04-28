@@ -17,7 +17,7 @@ function start(){
 function act(){
     hide();
     switch(stage){
-        case 0: et=166;
+        case 1: et=166;
     }
     ct();
 }
@@ -46,5 +46,5 @@ function st(){
 }
 
 function choice(){
-
+    swtich
 }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>집으로 2019</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="sc/mf.css">
+	<script type="text/javascript" src="js/utility.js"></script>
+	<script>
+		var stage = 1;
+		var hp=3;
+		var sp=3;
+		var et;
+		var ans=0;
+	</script>
+</head>
+<body style="margin:0px;padding:0px;overflow:hidden">		
+		<video controls id=v frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px" height="100%" width="100%">
+			<source src="https://r6---sn-i3beln7k.c.drive.google.com/videoplayback?expire=1556481611&ei=C87FXNmXEM_WuQWdo5aYAw&ip=119.202.88.180&cp=QVNKWEVfUFZPQlhOOjlvOE01Q20tWHdDb2hRSVlVUmQwbEFQbjdMWEN5RWNweFNOZkFuV3czRm8&id=530b51926c331e9c&itag=37&source=webdrive&requiressl=yes&mm=30&mn=sn-i3beln7k&ms=nxu&mv=m&pl=20&ttl=transient&susc=dr&driveid=1GDojBlstouDelvj6i2krd8ILBmywt9DC&app=explorer&mime=video/mp4&dur=176.030&lmt=1555759582735023&mt=1556467130&sparams=expire,ei,ip,cp,id,itag,source,requiressl,ttl,susc,driveid,app,mime,dur,lmt&sig=ALgxI2wwRAIgBxMajMD03EWbMXT_kpcDxCvhpO1vrfCwnAHnmIYQWO0CIEpAJifanoi8K0Hl932_PfR1lRluLNr1Y8mhj2dis2xY&lsparams=mm,mn,ms,mv,pl&lsig=AHylml4wRQIhAPR9HoL45cxKb6TpHqyc54k_GDy_RnnWf5hOwd69NvLkAiAwNS2NyGbM_B245CoH7hwwqIfYcLGpXRZTpSujTu-P6g==&cpn=UG-t2w4OrknJVAAI&c=WEB_EMBEDDED_PLAYER&cver=20190423" type='video/mp4'/>
+		</video>
+		
+	<div id="st1" style="visibility:hidden;font-size:17pt;position:absolute;top:5%;right:5%;z-index:100">
+	<strong style="color:white;">체력 : </strong>
+	<input class=tp disabled type='text' id='hp' value='3' size='1' style="font-size:17pt; color:white;" />
+	</div>
+	<div id="st2" style="visibility:hidden;font-size:17pt;position:absolute;top:10%;right:5%;z-index:100">
+		<strong style="color:white;">정신력 : </strong>
+		<input class=tp disabled type='text' id='san' value='3' size='1' style="font-size:17pt; color:white;" />
+	</div>
+	<div id="st3" style="visibility:hidden;font-size:17pt;position:absolute;top:15%;right:5%;z-index:100">
+		<strong style="color:white;">시간 : </strong>
+		<input class=tp disabled type='text' id='gold' value='6:00' size='1' style="font-size:17pt; color:white;" />
+	</div>
+	<button id="b1" class="bt" type="button" style="width:80%;height:10%;cursor:hand;filter:alpha(opacity=1);position:absolute;top:48%;left:10%;z-index:100">
+	<button id="b2" class="bt" type="button" style="width:80%;height:10%;cursor:hand;position:absolute;top:58%;left:10%;z-index:100">
+	<button id="start" class="bt" onclick="start();" type="button" style="width:100%;height:100%;cursor:hand;position:absolute;top:0%;left:0%;z-index:200">
+</body>
+</html>

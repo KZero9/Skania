@@ -2,22 +2,48 @@
 <html>
 
 <head>
-	<title>여정의 시작</title>
+	<title>집으로 2019</title>
 	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="sc/mf.css">
+	<script type="text/javascript" src="js/utility.js"></script>
+	<script>
+		var stage = 1;
+		var hp=3;
+		var sp=3;
+		var ans=0;
+		var time=600;
+	</script>
 </head>
-<body class=main>
-	<div id=ct>
-		<br>
-		<h1 style="font-size:70px;">집으로 2019</h1>
-		<h2 style="font-size:30px; margin-top: 30%;">
-			<a href="play.html" title="여정의 시작">여정의 시작</a>
-		</h2>
+<body style="margin:0vw;padding:0vw;overflow:hidden">		
+		<video controls id=v frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0vw;left:0vw;right:0vw;bottom:0vw" height="100%" width="100%">
+			<source src="https://www.dropbox.com/s/2zy49i1em34wbp3/S1.mp4?raw=1" type='video/mp4'/>
+		</video>
+		
+	<div id="st1" style="font-size:2vw;position:absolute;top:5%;right:5%;z-index:100">
+	<strong style="color:white;">체력 : </strong>
+		<img id="h1" src="img/heart.png" style="width:2vw;height:2vw;">
+		<img id="h2" src="img/heart.png" style="width:2vw;height:2vw;">
+		<img id="h3" src="img/heart.png" style="width:2vw;height:2vw;">
 	</div>
-	
+	<div id="st2" style="font-size:2vw;position:absolute;top:10%;right:5%;z-index:100">
+		<strong style="color:white;">정신력 : </strong>
+		<img id="s1" src="img/brain.png" style="width:2vw;height:2vw;">
+		<img id="s2" src="img/brain.png" style="width:2vw;height:2vw;">
+		<img id="s3" src="img/brain.png" style="width:2vw;height:2vw;">
+	</div>
+	<div id="st3" style="font-size:2vw;position:absolute;top:5%;left:7%;z-index:100">
+		<input class=time disabled type='text' id='time' value='06:00' size='1' />
+	</div>
+	<button id="b1" class="bt" type="button" style="width:80%;height:10%;cursor:hand;filter:alpha(opacity=1);position:absolute;top:48%;left:10%;z-index:100">
+	<button id="b2" class="bt" type="button" style="width:80%;height:10%;cursor:hand;position:absolute;top:58%;left:10%;z-index:100">
+	<button id="b3" class="bt" type="button" style="width:80%;height:10%;cursor:hand;position:absolute;top:68%;left:10%;z-index:100">
+	<button id="start" class="sbt" onclick="start();" type="button">시작</button>
+	<button id="restart" class="rbt" onclick="window.location.reload()" type="button">힘이 들어서 더 이상 가지 못하겠다...<br>집으로 다시 돌아가야 할 것 같다.<br>GAME OVER<br><br>다시 하려면 클릭!</button>
+	<button id="end" class="rbt" onclick="window.location.reload()" type="button">THE END<br><br>다시 하려면 클릭!</button>
 </body>
-<footer class=ft>
-	문화콘텐츠와 스토리텔링 2조
-</footer>
-
+<script>
+	hide();
+	hidest();
+</script>
 </html>

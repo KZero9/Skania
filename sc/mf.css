@@ -1,37 +1,21 @@
+@media only screen and (orientation:portrait){
+    body {
+      height: 100vw;
+      transform: rotate(90deg);
+    }
+}
 html {
     position: relative;
     min-width: 100%;
 	min-height: 100%;
 	line-height: 160%;
 }
-#ct{
-	text-align:center;
-}
-#videobcg { 
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1000;
-    overflow: hidden;
-}
-.main{
-				background-image:url('../img/main.jpg');
-				background-color: LightSKYBLUE;
-				background-size: cover;
-                }
-.grave{
-                background-image:url('../img/grave.jpg');
-                background-color: LightSKYBLUE;
-                background-size: cover;
-                }
 .bt {
     background-color:white;
+    opacity:0;
     }
 .bt:hover {
+    background-color:white;
     opacity:0.5;
         }
 .sbt {
@@ -43,31 +27,37 @@ html {
     top:45%;
     left:45%;
     border:none;
-    font-size: 30px;
+    font-size: 3vw;
     font-weight: bold;
-    border-radius: 15px;
+    border-radius: 1.5vw;
     z-index:200;
     background-color:red;
     color:white;
-    padding-bottom:10px;
+    padding-bottom:1vw;
 }
 .sbt:hover {
     background-color:#B22222;
         }
-a:link {text-decoration: none; color: white;}
-a:visited {text-decoration: none; color: white;}
-a:active {text-decoration: none; color: yellow;}
-a:hover {text-decoration: underline; color: yellow;}
-.ft {
-    position: absolute;
-    right: 0;
-    top: 0;
-    text-align: right;
-    padding: 30pt;
-    color:white;
-  }
-.tp{
+.rbt {
+            width:100%;
+            height:100%;
+            visibility: hidden;
+            cursor:hand;
+            text-align: center;
+            position:absolute;
+            top:0%;
+            left:0%;
+            border:none;
+            font-size: 4vw;
+            font-weight: bold;
+            z-index:200;
+            background-color:white;
+            color:black;
+        }
+
+.time{
     color:white;
     background-color:transparent;
     border:0;
+    font-size:3vw;
 }

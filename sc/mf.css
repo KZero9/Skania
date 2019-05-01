@@ -1,6 +1,6 @@
 @media only screen and (orientation:portrait){
     body {
-	height: 100vw;
+	width: 100vmax;
       transform: rotate(90deg);
     }
 }
@@ -8,7 +8,6 @@ html {
     
     min-width: 100vmax;
 	min-height: 100vmin;
-	line-height: 160%;
 }
 .bt {
     background-color:white;

@@ -1,5 +1,6 @@
 @media only screen and (orientation:portrait){
     body {
+	height: 100vmin;
 	width: 100vmax;
       transform: rotate(90deg);
     }

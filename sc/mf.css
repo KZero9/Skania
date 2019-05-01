@@ -1,10 +1,3 @@
-@media only screen and (orientation:portrait){
-    body {
-	    min-width: 100vmax;
-	min-height: 100vmin;
-      transform: rotate(90deg);
-    }
-}
 html {
     
     min-width: 100vmax;

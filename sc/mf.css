@@ -1,7 +1,7 @@
 html {
     
-    min-width: 100vmax;
-	min-height: 100vmin;
+    min-width: 100%;
+	min-height: 100%;
 }
 .bt {
     background-color:white;

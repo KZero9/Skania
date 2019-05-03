@@ -1,3 +1,4 @@
+
 function fullScreen() {
     // Kind of painful, but this is how it works for now
     if (document.documentElement.requestFullscreen) {

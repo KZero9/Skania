@@ -30,15 +30,6 @@ function fullScreen() {
     fullScreen();
     screen.orientation.lock(orientation);
   }
-  function locken(orientation){
-      if(end){
-          smolScreen();
-      }
-      else{
-          if(screen.orientation!=orientation) lock(orientation);
-          setTimeout(locking(orientation), 1000);
-      }
-  }
 
 function hide() {
     document.getElementById("b1").style.visibility = "hidden";
@@ -58,6 +49,7 @@ function hidest() {
 }
 
 function show() {
+    lock();
     document.getElementById("b1").style.visibility = "visible";
     document.getElementById("b2").style.visibility = "visible";
 }
@@ -72,6 +64,7 @@ function beginst() {
 }
 
 function showst() {
+    lock();
     document.getElementById("st1").style.visibility = "visible";
     document.getElementById("st2").style.visibility = "visible";
     document.getElementById("st3").style.visibility = "visible";
@@ -79,6 +72,7 @@ function showst() {
 }
 
 function checktime() {
+    lock();
     var i = time % 100;
     var j;
     if (i >= 60) {
@@ -141,13 +135,12 @@ function checkst() {
 }
 
 function start(){
-    
     document.getElementById("start").style.visibility = "hidden";
     act();
-    locken('landscape');
 } 
 
 function act(){
+    lock();
     document.getElementById("v").play();
     switch(stage){
         case 1 : s1(); beginst(); break;
@@ -222,7 +215,7 @@ function s4(){
          document.getElementById("b1").style.top = "50%";
     document.getElementById("b2").style.top = "60%";
     document.getElementById("b1").onclick =   function () { ans=1; choice(); this.onclick = null; };
-    ument.getElementById("b2").onclick = function () { ans=2; choice(); this.onclick = null; };
+    document.getElementById("b2").onclick = function () { ans=2; choice(); this.onclick = null; };
     }
     else{  
     setTimeout(s4,1000);
@@ -247,7 +240,8 @@ function s5(){
         }
         case 2:{
             if(18<=document.getElementById("v").currentTime){
-                 time+=30;
+                 if(time==800) time+=300;
+                 else time+=200;
                  checktime(); 
                 setTimeout(choice,1500);
             }
@@ -292,7 +286,7 @@ function s8(){
                  sp-=1;
                   hp-=1; 
                 checkst();
-                time+=30;
+                time+=100;
                 checktime();
                 setTimeout(choice,1500);
             }
@@ -306,7 +300,7 @@ function s8(){
                  sp+=1;
                  hp+=1; 
                 checkst();
-                time+=30;
+                time+=130;
                 checktime();
                 setTimeout(choice,1500);
             }
@@ -333,6 +327,7 @@ function s8(){
 
 function s9(){
     if(9<=document.getElementById("v").currentTime){
+        time+=300;
         choice();
     }    
     else{
@@ -415,10 +410,10 @@ function choice(){
             break;
         }
         case 9:{
-            if( time>1100){
+            if( time>=1500){
                 document.getElementById("v").src="https://www.dropbox.com/s/5y1h1o7k0zf3cbl/S10_ending_night.mp4?raw=1";
             }
-            else if(time>1000){  
+            else if(time>1330){  
                 document.getElementById("v").src="https://www.dropbox.com/s/79klda1l16b02qy/S10_ending_evening.mp4?raw=1";
             }
             else{

@@ -1,4 +1,6 @@
 
+
+
 function fullScreen() {
     // Kind of painful, but this is how it works for now
     if (document.documentElement.requestFullscreen) {
@@ -26,7 +28,7 @@ function fullScreen() {
   
   function lock(orientation) {
     fullScreen();
-    screen.orientation.lock(orientation);
+    window.screen.orientation.lock(orientation);
   }
 
 function hide() {

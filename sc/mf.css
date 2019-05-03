@@ -1,9 +1,7 @@
-@media only screen and (orientation:portrait){
-    body {
-        width: 100vh;
-      transform: rotate(90deg);
-      
-    }
+@media only screen and (orientation:landscape){
+
+  }
+  @media only screen and (orientation:portrait){
   }
 .bt {
     background-color:white;

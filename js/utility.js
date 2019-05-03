@@ -28,7 +28,16 @@ function fullScreen() {
   
   function lock(orientation) {
     fullScreen();
-    window.screen.orientation.lock(orientation);
+    screen.orientation.lock(orientation);
+  }
+  function locken(orientation){
+      if(end){
+          smolScreen();
+      }
+      else{
+          if(screen.orientation!=orientation) lock(orientation);
+          setTimeout(locking(orientation), 1000);
+      }
   }
 
 function hide() {
@@ -132,9 +141,10 @@ function checkst() {
 }
 
 function start(){
-    lock('landscape');
+    
     document.getElementById("start").style.visibility = "hidden";
     act();
+    locken('landscape');
 } 
 
 function act(){

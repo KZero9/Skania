@@ -23,12 +23,6 @@ function fullScreen() {
       document.msExitFullscreen();
     }
   }
-  
-  function lock(orientation) {
-    fullScreen();
-    screen.orientation.lock(orientation);
-  }
-
 
 function hide() {
     document.getElementById("b1").style.visibility = "hidden";
@@ -131,7 +125,7 @@ function checkst() {
 }
 
 function start(){
-    lock('landscape');
+    fullScreen();
     document.getElementById("start").style.visibility = "hidden";
     act();
 } 

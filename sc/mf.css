@@ -1,3 +1,9 @@
+@media only screen and (orientation:portrait){
+    body {
+      transform: rotate(90deg);
+      height: 100vw;
+    }
+  }
 .bt {
     background-color:white;
     opacity:0;

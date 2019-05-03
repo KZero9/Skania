@@ -125,7 +125,6 @@ function checkst() {
 }
 
 function start(){
-    fullScreen();
     document.getElementById("start").style.visibility = "hidden";
     act();
 } 

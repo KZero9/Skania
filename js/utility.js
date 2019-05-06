@@ -91,7 +91,9 @@ function gameover() {
 function checkst() {
     if (hp == 0 || sp == 0) {
         gameover();
-    }      
+    }
+    if (hp>3) hp=3;
+    if (sp>3) sp=3;      
     switch(hp){
         case 1:{
              document.getElementById("h1").style.visibility = "hidden";
@@ -171,10 +173,14 @@ function s1(){
 function s2(){
     switch(ans){
         case 1:{
-            if(14<=document.getElementById("v").currentTime){
+            if(time<=600&&2<=document.getElementById("v").currentTime){
+                time+=100;
+                checktime();
+            }
+            if(15<=document.getElementById("v").currentTime){
                   hp-=1;
                  checkst();
-                 time+=330; 
+                 time+=230; 
                 checktime();
                 setTimeout(choice,1500);
             }  
@@ -213,7 +219,7 @@ function s4(){
         document.getElementById("v").pause();
         show( );
          document.getElementById("b1").style.top = "50%";
-    document.getElementById("b2").style.top = "60%";
+    document.getElementById("b2").style.top = "59%";
     document.getElementById("b1").onclick =   function () { ans=1; choice(); this.onclick = null; };
     document.getElementById("b2").onclick = function () { ans=2; choice(); this.onclick = null; };
     }
@@ -231,19 +237,45 @@ function s5(){
                  checkst(); 
                 time+=100;
                 checktime();
-                setTimeout(choice,1500);
+                setTimeout(choice,2000);
             }
             else{ 
                 setTimeout(s5,1000);
             } 
             break; 
         }
-        case 2:{
-            if(18<=document.getElementById("v").currentTime){
-                 if(time==800) time+=300;
-                 else time+=200;
-                 checktime(); 
-                setTimeout(choice,1500);
+        case 2:{ //time==800
+            if(time<=800&&1<=document.getElementById("v").currentTime){
+                time+=100;
+                checktime();
+            }
+            if(time<=900&&10<=document.getElementById("v").currentTime){
+                time+=100;
+                checktime();
+            }
+            if(22<=document.getElementById("v").currentTime){
+                 time+=100;
+                 checktime();
+                 hp-=1;
+                 checkst(); 
+                setTimeout(choice,2000);
+            }
+            else{ 
+                setTimeout(s5,1000);
+            } 
+            break; 
+        }
+        case 3:{ //time==930
+            if(time<=930&&7.5<=document.getElementById("v").currentTime){
+                time+=100;
+                checktime();
+            }
+            if(20<=document.getElementById("v").currentTime){
+                time+=100;
+                checktime();
+                hp-=1;
+                 checkst(); 
+                setTimeout(choice,2000);
             }
             else{ 
                 setTimeout(s5,1000);
@@ -265,10 +297,13 @@ function s6(){
 function s7(){
     if(28<=document.getElementById("v").currentTime){
         document.getElementById("v").pause();
-         show(); 
+         show();
+         document.getElementById("b1").style.height="8.5%";
+        document.getElementById("b2").style.height="8.5%";
+        document.getElementById("b3").style.height="8.5%"; 
         document.getElementById("b1").style.top="45%";
-        document.getElementById("b2").style.top = "55%";
-        document.getElementById("b3").style.top = "65%"; 
+        document.getElementById("b2").style.top = "53.5%";
+        document.getElementById("b3").style.top = "62%"; 
         document.getElementById("b3").style.visibility = "visible";
         document.getElementById("b1").onclick =   function () { ans=1; choice(); this.onclick = null; };
         document.getElementById("b2").onclick = function () { ans=2; choice(); this.onclick = null; };
@@ -315,7 +350,7 @@ function s8(){
                   checkst(); 
                 time +=30;
                 checktime();
-                setTimeout(choice,1500);
+                setTimeout(choice,2000);
             }
             else{ 
                 setTimeout(s8,1000);
@@ -328,7 +363,7 @@ function s8(){
 function s9(){
     if(9<=document.getElementById("v").currentTime){
         time+=300;
-        choice();
+        setTimeout(choice,1500);
     }    
     else{
         setTimeout(s9,1000);
@@ -336,14 +371,24 @@ function s9(){
 } 
 
 function s10(){
-    if(87<=document.getElementById("v").currentTime){
-        document.getElementById("v").pause();
-        document.getElementById("end").style.visibility = "visible";
+    if(time!=600 && 35<=document.getElementById("v").currentTime){
+        checktime();
+        time=600;
+    }
+    if(time==600 && 55<=document.getElementById("v").currentTime){
+        document.getElementById("st3").style.visibility = "hidden"; 
+    }
+    if(86<=document.getElementById("v").currentTime){
+        setTimeout(finish,2000);
     }    
     else{
         setTimeout(s10,1000);
     } 
-} 
+}
+function finish(){
+    document.getElementById("v").pause();
+    document.getElementById("end").style.visibility = "visible";
+}
 
 function choice(){
     hide();
@@ -375,7 +420,11 @@ function choice(){
                 document.getElementById("v").src="https://www.dropbox.com/s/g7zn1796bskqu7d/S4_app.mp4?raw=1";
             }
             else{  
-                document.getElementById("v").src="https://www.dropbox.com/s/e6f6aikvlveuhk2/S4_terminal.mp4?raw=1";
+                if(time==800) document.getElementById("v").src="https://www.dropbox.com/s/k4yxjzknhk9tq0j/S4_2_terminal.mp4?raw=1";
+                else{
+                    ans=3;
+                    document.getElementById("v").src="https://www.dropbox.com/s/e6f6aikvlveuhk2/S4_terminal.mp4?raw=1";
+                }
             }
             break;
         }    
@@ -410,15 +459,16 @@ function choice(){
             break;
         }
         case 9:{
-            if( time>=1500){
+            if( time>=1530){
                 document.getElementById("v").src="https://www.dropbox.com/s/5y1h1o7k0zf3cbl/S10_ending_night.mp4?raw=1";
             }
-            else if(time>1330){  
+            else if(time>=1430){  
                 document.getElementById("v").src="https://www.dropbox.com/s/79klda1l16b02qy/S10_ending_evening.mp4?raw=1";
             }
             else{
                  document. getElementById("v").src="https://www.dropbox.com/s/1bw3qb875xs1shf/S10_ending_on_time.mp4?raw=1";
-            }  
+            }
+            document.getElementById("st3").style.visibility = "visible"; 
             break;
                 
 
